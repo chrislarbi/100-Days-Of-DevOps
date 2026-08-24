@@ -98,7 +98,7 @@ This repository contains my comprehensive solutions and learning journey through
 | 43  | [Docker Ports Mapping](Day%2043/Docker%20Ports%20Mapping.md)                                                       | ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat&logo=docker&logoColor=white) | 🟢 Beginner     |
 | 45  | [Resolve Dockerfile Issues](Day%2045/Resolve%20Dockerfile%20Issues.md)                                             | ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat&logo=docker&logoColor=white) | 🟡 Intermediate |
 | 46  | [Deploy an App on Docker Containers](Day%2046/Deploy%20an%20App%20on%20Docker%20Containers.md)                     | ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat&logo=docker&logoColor=white) | 🟡 Intermediate |
-| 47  | [Docker Python App](Day%2047/Docker%20Python%20App.md)                                                             | ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat&logo=docker&logoColor=white) | 🟡 Intermediate |
+| 47  | [Docker Python App](Day%2047/)                                                             | ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat&logo=docker&logoColor=white) | 🟡 Intermediate |
 
 ## ☸️ Kubernetes & Orchestration
 
