@@ -96,7 +96,7 @@ This repository contains my comprehensive solutions and learning journey through
 | 42  | [Create a Docker Network](Day%2042/Create%20a%20Docker%20Network.md)                                               | ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat&logo=docker&logoColor=white) | 🟡 Intermediate |
 | 44  | [Write a Docker Compose File](Day%2044/Write%20a%20Docker%20Compose%20File.md)                                     | ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat&logo=docker&logoColor=white) | 🟡 Intermediate |
 | 43  | [Docker Ports Mapping](Day%2043/Docker%20Ports%20Mapping.md)                                                       | ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat&logo=docker&logoColor=white) | 🟢 Beginner     |
-| 45  | [Resolve Dockerfile Issues](Day%2045/Resolve%20Dockerfile%20Issues.md)                                             | ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat&logo=docker&logoColor=white) | 🟡 Intermediate |
+| 45  | [Resolve Dockerfile Issues](Day%2045/)                                             | ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat&logo=docker&logoColor=white) | 🟡 Intermediate |
 | 46  | [Deploy an App on Docker Containers](Day%2046/)                     | ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat&logo=docker&logoColor=white) | 🟡 Intermediate |
 | 47  | [Docker Python App](Day%2047/)                                                             | ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat&logo=docker&logoColor=white) | 🟡 Intermediate |
 
