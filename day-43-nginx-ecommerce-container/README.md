@@ -54,6 +54,6 @@ Whenever deploying an isolated service like a container, a VM, or a serverless f
 
 I had pulled Docker images plenty of times before, but this was the first time I deliberately separated the `pull` from the `run` as a troubleshooting habit rather than just doing it out of habit. It made me realize how much easier it is to debug when each step has one job.
 
-The port mapping order also caught me for a second — I keep wanting to write it as container-to-host because that feels like the direction data flows, but Docker reads it as host-to-container (`-p host:container`). Writing it down here so it sticks.
+The port mapping order caught me for a second too. I keep wanting to write it container-to-host because that feels like the direction data flows, but Docker reads it as host-to-container (`-p host:container`). Writing it down here so it sticks.
 
 Verifying with `curl` after `docker ps` was a good reminder that a running container isn't the same as a working service. The container was up within seconds, but I wouldn't have trusted it without hitting the endpoint.
