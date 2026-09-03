@@ -23,19 +23,16 @@ Running the process in the background. This exists to keep server processes aliv
 ## Solution
 
 **Step 1: Verify environment and prerequisites**
-Why: To confirm server identity and container runtime health before changing state.
+Why: I wanted to be sure I was on the right server before touching anything. Running `hostname` and `docker info` took five seconds and saved me from potentially running commands on the wrong machine.
 Command: `hostname` and `docker info`
-Reasoning Skill: The "Verify Assumptions" pattern. Never assume the infrastructure matches the ticket; always prove context first.
 
 **Step 2: Pull the specific image**
-Why: To fetch the dependency and isolate potential registry or network issues from runtime configuration issues.
+Why: I pulled the image separately rather than going straight to `docker run`. If something goes wrong with the registry or the network, I know exactly where the failure is instead of guessing.
 Command: `docker pull nginx:stable`
-Reasoning Skill: The "Explicit Artifact Retrieval" pattern. Separate fetching dependencies from execution for easier troubleshooting.
 
 **Step 3: Run the container with port mapping and detached mode**
-Why: To instantiate the image into a background process and bridge the host's port 8084 to the container's port 80.
+Why: The task required port 8084 on the host to forward to port 80 inside the container, and the container needed to keep running after I closed my terminal.
 Command: `docker run -d --name ecommerce -p 8084:80 nginx:stable`
-Reasoning Skill: The "Interface Binding" pattern. When bridging isolated systems, explicitly define the mapping of external interfaces to internal ones.
 
 ## How to verify this actually works
 Run `docker ps` to ensure the container is Up and the PORTS column shows 0.0.0.0:8084->80/tcp.
@@ -54,4 +51,9 @@ Ignoring the image tag by pulling just `nginx` which defaults to the `latest` ta
 Whenever deploying an isolated service like a container, a VM, or a serverless function, you must explicitly manage its network boundaries. The pattern is always the same: define the compute artifact, provide it runtime execution parameters like background mode, and explicitly declare the ingress port or load balancer rule that connects the outside world to the internal service.
 
 ## What I learned
-[First-person reflection to be filled in]
+
+I had pulled Docker images plenty of times before, but this was the first time I deliberately separated the `pull` from the `run` as a troubleshooting habit rather than just doing it out of habit. It made me realize how much easier it is to debug when each step has one job.
+
+The port mapping order also caught me for a second — I keep wanting to write it as container-to-host because that feels like the direction data flows, but Docker reads it as host-to-container (`-p host:container`). Writing it down here so it sticks.
+
+Verifying with `curl` after `docker ps` was a good reminder that a running container isn't the same as a working service. The container was up within seconds, but I wouldn't have trusted it without hitting the endpoint.
